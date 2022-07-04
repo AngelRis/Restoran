@@ -105,6 +105,8 @@ nav ul li{
 #special>div{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 .specijaliteit{
     width: 360px;
@@ -160,18 +162,142 @@ nav ul li{
     color: #77778D;
 }
 /*kraj special*/
-@media (max-width: 800px){
+#about{
+    width: auto;
+    height: auto;
+    display: flex;
+    background: #F6F6F6;
+    flex-direction: row;
+}
+#about img{
+    width: 700px;
+    height: 565px;
+}
+#about>div{
+    width: 500px;
+    margin-left: 10%;
+    padding-top: 50px;
+    padding-right: 10%;
+    padding-bottom: 10%;
+}
+#about p{
+    line-height: 1.5;
+    color: #77778D;
+    font-size: 16px;
+    padding-top: 20px;
+}
+#about h1{
+    font-weight: 100;
+    font-size: 35px;
+    display: inline-block;
+    padding-bottom: 30px;
+
+}
+#about h1:after{
+    content: '';
+    width: 35%;
+    background:#C14E4F;
+    height: 3px;
+    display:block;
+    margin-top: 20px;
+}
+#about a{
+    display: inline-block;
+    color: #EEEEEE;
+    margin-top: 7%;
+    background: #C14E4F;
+    padding: 15px 10px;
+    transition: 0.4s;
+}
+#about a:hover{
+    color: #C14E4F;
+    background: white;
+    border: 1px solid #C14E4F;
+}
+#menu{
+    width: auto;
+    height: 100vh;
+}
+.ceni .naslov{
+    padding-top: 25px;
+}
+.naslov-menu{
+    text-align: center;
+    padding-bottom: 40px;
+}
+.container {
+    display: flex;
+    width: auto;
+    margin: auto;
+    justify-content: center;
+
+}
+.container #flex{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.ceni{
+    width: 500px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+.ceni div:last-of-type{
+    margin-bottom: 30px;
+}
+.ceni div p:first-of-type{
+    display: inline;
+    font-size: 20px;
+    font-weight: 300;
+}
+.ceni div p:nth-of-type(2){
+    display: inline;
+    float: right;
+    font-size: 24px;
+}
+.ceni div p:last-of-type{
+    padding: 2% 0;
+    line-height: 1.4;
+    color: #77778D;
+}
+@media (max-width: 1177px){
+    #about{
+        flex-direction: column;
+    }
+    #about img{
+        width: auto;
+        height: 400px;
+    }
+    #about>div{
+        width: auto;
+    }
+}
+@media (max-width: 1024px){
+    .ceni .naslov{
+        height:101px;
+    }
+}
+@media (max-width: 850px){
     nav{
         display: none;
     }
     #home p{
         padding-top: 150px;
+        font-size:130px;
     }
-    #special>div{
-        flex-direction: column;
-    }
+
     .specijaliteit{
     margin: auto;
         padding-top: 35px;
     }
+    .ceni{
+        width: auto;
+        margin: auto;
+        padding: 0 10% 10% 10%;
+    }
+    .container{
+        flex-direction: column;
+    }
+
 }
