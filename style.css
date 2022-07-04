@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+    color: #333333;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+#home{
+    width: 100%;
+    height:580px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url("img/intro-bg.jpg") ;
+    background-size: cover;
+    background-position: center;
+}
+/*Pocetok za navigacija*/
+nav{
+   text-align: center;
+    padding-top: 25px;
+}
+a{
+    text-decoration: none;
+    font-size: 19px;
+}
+nav a{
+    color: #EEEEEE;
+}
+nav li::after{
+    content: '';
+    width:0;
+    height: 2px;
+    transition: 0.5s;
+    border-radius: 5px;
+    background: #FFA500;
+    display: block;
+    margin: auto;
+}
+nav li:hover::after{
+    width:100%;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+/*Kraj za navigacija*/
+/*Pocetook home*/
+#home p{
+    font-family: 'Brush Script MT';
+    color: #EEEEEE;
+    font-size:145px;
+    text-align: center;
+    padding-top: 100px;
+}
+#home .kopce{
+    margin-top: 25px;
+}
+.kopce{
+    width: 166px;
+    height: 55px;
+    background: #EEEEEE;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kopce a{
+    padding: 8px;
+    border: 2px solid #FFA500;
+    color:#FFA500;
+    transition: 0.3s;
+}
+.kopce a:hover{
+    background: #FFA500;
+    color: #EEEEEE;
+    padding: 15px;
+}
+/*kraj home*/
+/*pocetok special*/
+#special{
+
+    width: 100%;
+
+    text-align: center;
+}
+.naslov{
+    text-align: center;
+    font-weight: 100;
+    font-size: 35px;
+    display: inline-block;
+    padding-top: 80px;
+
+}
+.naslov:after {
+    content: '';
+    width: 80px;
+    background: #C14E4F;
+    height: 2px;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+}
+#special>div{
+    display: flex;
+    justify-content: center;
+}
+.specijaliteit{
+    width: 360px;
+   margin: 25px 25px 20px 15px;
+}
+.specijaliteit div{
+    background-size: cover;
+    background-position: center;
+    width: 360px;
+    height: 230px;
+    font-size: 55px;
+    border-radius: 6px;
+    transition: 0.4s;
+    font-family: 'Comic Sans MS';
+}
+.specijaliteit div:after{
+    content: '';
+    width: 0;
+    background:rgb(0,0,0,0.5);
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    color: #EEEEEE;
+    display: flex;
+    align-items: center;
+    opacity: 1.0;
+    border-radius: 6px;
+    transition: 0.4s;
+}
+.specijaliteit div:hover::after{
+    width: 100%;
+    content: '22$';
+}
+.specijaliteit div:hover{
+    transform: scale(1.1);
+}
+.specijaliteit:nth-of-type(1) div {
+    background-image: url("img/specials/1.jpg");
+}
+.specijaliteit:nth-of-type(2) div {
+    background-image: url("img/specials/2.jpg");
+}
+.specijaliteit:nth-of-type(3) div {
+    background-image: url("img/specials/3.jpg");
+}
+.specijaliteit h2{
+    font-weight: 50;
+    padding-bottom: 20px;
+}
+.specijaliteit p{
+    padding-top: 12px;
+    line-height: 1.5;
+    color: #77778D;
+}
+/*kraj special*/
+@media (max-width: 800px){
+    nav{
+        display: none;
+    }
+    #home p{
+        padding-top: 150px;
+    }
+    #special>div{
+        flex-direction: column;
+    }
+    .specijaliteit{
+    margin: auto;
+        padding-top: 35px;
+    }
+}
