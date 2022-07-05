@@ -51,7 +51,7 @@ nav ul li{
 /*Kraj za navigacija*/
 /*Pocetook home*/
 #home p{
-    font-family: 'Brush Script MT',sans-serif;
+    font-family: 'Lucida Handwriting';
     color: #EEEEEE;
     font-size:145px;
     text-align: center;
@@ -446,7 +446,7 @@ footer li:last-of-type{
     }
     #home p{
         padding-top: 150px;
-        font-size:130px;
+        font-size:90px;
     }
 
     .specijaliteit{
