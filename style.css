@@ -60,29 +60,28 @@ nav ul li{
 .kopce{
     width: 166px;
     height: 55px;
-    background: #EEEEEE;
+    background:#FFA500;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.kopce a{
     padding: 8px;
-    border: 2px solid #FFA500;
-    color:#FFA500;
+    color:#EEEEEE;
     transition: 0.3s;
 }
-.kopce a:hover{
-    background: #FFA500;
-    color: #EEEEEE;
+
+.kopce:hover{
+    /* border: 2px solid #FFA500;*/
+    color:#FFA500;
+    border: 3px solid #FFA500;
+    background:rgb(255,255,255,0.8);
+    opacity: 1.0;
     padding: 15px;
 }
 /*kraj home*/
 /*pocetok special*/
 #special{
-
     width: 100%;
-
     text-align: center;
 }
 .naslov{
@@ -173,27 +172,27 @@ nav ul li{
     width: 700px;
     height: 565px;
 }
-#about>div{
+.about{
     width: 500px;
     margin-left: 10%;
     padding-top: 50px;
     padding-right: 10%;
-    padding-bottom: 10%;
+    padding-bottom: 4%;
 }
-#about p{
+.about p{
     line-height: 1.5;
     color: #77778D;
     font-size: 16px;
     padding-top: 20px;
 }
-#about h1{
+.about h1{
     font-weight: 100;
     font-size: 35px;
     display: inline-block;
     padding-bottom: 30px;
 
 }
-#about h1:after{
+.about h1:after{
     content: '';
     width: 35%;
     background:#C14E4F;
@@ -201,7 +200,7 @@ nav ul li{
     display:block;
     margin-top: 20px;
 }
-#about a{
+.about a{
     display: inline-block;
     color: #EEEEEE;
     margin-top: 7%;
@@ -209,14 +208,13 @@ nav ul li{
     padding: 15px 10px;
     transition: 0.4s;
 }
-#about a:hover{
+.about a:hover{
     color: #C14E4F;
     background: white;
     border: 1px solid #C14E4F;
 }
 #menu{
     width: auto;
-    height: 100vh;
 }
 .ceni .naslov{
     padding-top: 25px;
@@ -237,6 +235,9 @@ nav ul li{
     height: auto;
     display: flex;
     flex-direction: column;
+}
+#flex{
+    margin-bottom: 80px;
 }
 .ceni{
     width: 500px;
@@ -261,6 +262,50 @@ nav ul li{
     line-height: 1.4;
     color: #77778D;
 }
+#gallery{
+    display: flex;
+    width: auto;
+    justify-content: center;
+}
+#gallery div{
+    width: 379px;
+    height: 270px;
+}
+#gallery div:first-of-type{
+    background: url("img/gallery/01.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#gallery div:nth-of-type(2){
+    background: url("img/gallery/02.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#gallery div:nth-of-type(3){
+    background: url("img/gallery/03.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#gallery div:last-of-type{
+    background: url("img/gallery/04.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#sef{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sef .about{
+    margin-left: 0;
+    padding-left: 5%;
+   padding-right: 7%;
+}
+#sef img{
+    width: 550px;
+    height: 350px;
+}
 @media (max-width: 1177px){
     #about{
         flex-direction: column;
@@ -269,13 +314,24 @@ nav ul li{
         width: auto;
         height: 400px;
     }
-    #about>div{
+    .about{
         width: auto;
     }
 }
 @media (max-width: 1024px){
     .ceni .naslov{
         height:101px;
+    }
+    #sef {
+        flex-direction: column;
+    }
+    #sef img{
+        width: 100%;
+        height: 350px;
+        margin-top: 10%;
+    }
+    #sef .about{
+        padding-left: 10%;
     }
 }
 @media (max-width: 850px){
@@ -298,6 +354,9 @@ nav ul li{
     }
     .container{
         flex-direction: column;
+    }
+    #gallery{
+        flex-wrap: wrap;
     }
 
 }
